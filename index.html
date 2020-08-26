@@ -32,7 +32,7 @@
             <a class="nav-link text-dark" href="#"><h4><i class="far fa-folder "></i></h4></a>
           </li>
           <li class="nav-item px-2">
-            <a class="nav-link text-dark" href=""><h4><i class="far fa-star"></i></h4></a>
+            <a class="nav-link text-dark" href="#"><h4><i class="far fa-star"></i></h4></a>
           </li>
         </ul>
         <ul class="navbar-nav justify-content-end mr-5">
@@ -40,7 +40,8 @@
             <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <h4><i class="fas fa-palette"></i></h4>
             </a>
-            <div class="dropdown-menu row px-3" aria-labelledby="navbarDropdown">
+            <div class="row px-3" aria-labelledby="navbarDropdown">
+              <!-- <a class="dropdown-item col px-1" href="#"><div class="circle"></div></a>
               <a class="dropdown-item col px-1" href="#"><div class="circle"></div></a>
               <a class="dropdown-item col px-1" href="#"><div class="circle"></div></a>
               <a class="dropdown-item col px-1" href="#"><div class="circle"></div></a>
@@ -54,10 +55,10 @@
               <a class="dropdown-item col px-1" href="#"><div class="circle"></div></a>
               <a class="dropdown-item col px-1" href="#"><div class="circle"></div></a>
               <a class="dropdown-item col px-1" href="#"><div class="circle"></div></a>
-              <a class="dropdown-item col px-1" href="#"><div class="circle"></div></a>
-              <a class="dropdown-item col px-1" href="#"><div class="circle"></div></a>
+              <a class="dropdown-item col px-1" href="#"><div class="circle"></div></a> -->
             </div>
           </li>
+          <li><button class="btn ml-4 my-2 px-3" style="background-color: #673ab7; color: white;"><a href="back.html" style="color: white; text-decoration: none;">Submit</a></button></li>
         </ul>
       </div>
     </nav>
@@ -69,7 +70,7 @@
       </div>
     </div>
 
-    <div id="question" class="row justify-content-between">
+    <div id="question" class="row justify-content-between my-3">
       <div class="card col-lg-7 col-md-9 col-11">
         <form action="">
           <div class="row">
@@ -96,27 +97,17 @@
             </div>
             <div class="row">
               <div class="col-md-1 col-3 pr-0 pt-2"><input type="radio" disabled></div>
-              <div class="col-md-6 col-7 text-left p-2 px-3"><a href="" class="text-secondary">Add option</a> or <a href="">add "Other"</a></div>
+              <div class="col-md-6 col-7 text-left p-2 px-3"><a onClick="addMutipleChoice()"  class="text-secondary">Add option</a> or <a onClick="addMutipleChoiceOther()" >add "Other"</a></div>
             </div>
           </div>
-
-          <div class="answers1 d-flex flex-column">
-            <!-- <div class="row justify-content-start">  
-              <div class="col-6 mb-4">
-                <input type="text" class="form-control text" placeholder="Short answer text" disabled>
-              </div>
-            </div> -->
-          </div>
-
-
-          
+    
           <hr class="mt-4 mx-3">
           <div class="row justify-content-end mt-4 mb-2">
             <div class="col-md-1 col-2 px-0">
               <i class="far fa-trash-alt"></i>
             </div>
             <div class="col-md-1 col-2 px-0">
-              <i class="far fa-copy"></i>
+              <a onclick="newCardFunc()" class="addnew"><i class="far fa-copy"></i></a>
             </div>
             <div class="col-md-3 col-6 pl-0">
               <div class="row justify-content-end">
@@ -130,29 +121,22 @@
                     <span class="slider round"></span>
                   </label>
                 </div>
-              </div>
-            
-              
-              
-              
+              </div>       
             </div>
           </div>
-              
-              
-             
-            
-          
         </form>    
       </div>
     </div>
+
+    <div class="new">
+            
+    </div>
     
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script> -->
+    <script src="script.js"></script>
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   </body>
