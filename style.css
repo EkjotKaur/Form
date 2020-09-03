@@ -182,3 +182,10 @@ a{
   color: inherit;
   text-decoration: none;
 }
+.field-question{
+  padding: 10px 20px;
+}
+.field-answer{
+  padding: 0px 0px 20px;
+  width: 50%;
+}
