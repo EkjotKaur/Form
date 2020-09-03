@@ -16,8 +16,7 @@ const answerOutput = (contents) => {
 
 
 var data = {
-  multipleChoice: ['Option 1'],
-  checkbox: ['Option 1'],
+  checkbox: ['Option 1']
   dropdown: [
     {
       id: 1,
@@ -29,23 +28,7 @@ var data = {
 
 const refresh = () =>{
   var questionType = document.querySelector("#question-type").value;
-  if(questionType === "Multiple-Choice"){
-    let options = '';
-    data.multipleChoice.forEach(option => {
-      (options += ` <div class="row">
-                    <div class="col-md-1 col-3 pr-0 pt-2"><input type="radio" disabled></div>
-                    <div class="col-md-6 col-7 pl-0"><input type="text" value="${option}" class="form-control px-0"></div>
-                  </div>`);
-    });
-    if(data.multipleChoice[data.multipleChoice.length-1] !== "Other"){
-    options += ` <div class="row">
-                    <div class="col-md-1 col-3 pr-0 pt-2"><input type="radio" disabled></div>
-                    <div class="col-md-6 col-7 text-left p-2 px-3"><a onClick="addMutipleChoice()" class="text-secondary">Add option</a> or <a onClick="addMultipleChoiceOther()">add "Other"</a></div>
-                  </div>`;
-    }
-      answerOutput(options)
-  }
-  else if(questionType === "Checkbox"){
+  if(questionType === "Checkbox"){
     let options = '';
     data.checkbox.forEach(option => {
       (options += ` <div class="row">
@@ -85,17 +68,6 @@ const refresh = () =>{
   }
 }
 
-const addMutipleChoice = () => {
-  let size = data.multipleChoice.length;
-  data.multipleChoice.push('Option ' + (size+1));
-  console.log(data.multipleChoice);
-  refresh();
-}
-
-const addMultipleChoiceOther = () => {
-  data.multipleChoice.push('Other');
-  refresh();
-}
 
 const addCheckbox = () => {
   let size = data.checkbox.length;
@@ -150,12 +122,12 @@ const newCardFunc = () => {
 
           <div class="answers d-flex flex-column">
             <div class="row">
-              <div class="col-md-1 col-3 pr-0 pt-2"><input type="radio" disabled></div>
+              <div class="col-md-1 col-3 pr-0 pt-2"><input type="checkbox" disabled></div>
               <div class="col-md-6 col-7 pl-0"><input type="text" value="Option 1" class="form-control px-0"></div>
             </div>
             <div class="row">
-              <div class="col-md-1 col-3 pr-0 pt-2"><input type="radio" disabled></div>
-              <div class="col-md-6 col-7 text-left p-2 px-3"><a onClick="addMutipleChoice()"  class="text-secondary">Add option</a> or <a onClick="addMutipleChoiceOther()" >add "Other"</a></div>
+              <div class="col-md-1 col-3 pr-0 pt-2"><input type="checkbox" disabled></div>
+              <div class="col-6 text-left p-2 px-3"><a onClick="addCheckbox()" class="text-secondary">Add option</a> or <a onClick="addCheckboxOther()">add "Other"</a></div>
             </div>
           </div>
 
@@ -166,20 +138,6 @@ const newCardFunc = () => {
             </div>
             <div class="col-md-1 col-2 px-0">
               <a onclick="newCardFunc()" class="addnew"><i class="far fa-copy"></i></a>
-            </div>
-            <div class="col-md-3 col-6 pl-0">
-              <div class="row justify-content-end">
-                <span><h5>|</h5></span>
-                <div class="col-5  p-0 text-right">
-                  <p>Required</p>
-                </div>
-                <div class="col-5  pl-0 custom-control custom-switch pt-1">
-                  <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                  </label>
-                </div>
-              </div>       
             </div>
           </div>
         </form>    
