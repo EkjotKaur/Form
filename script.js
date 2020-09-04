@@ -16,7 +16,7 @@ const answerOutput = (contents) => {
 
 
 var data = {
-  checkbox: ['Option 1']
+  checkbox: ['Option 1'],
   dropdown: [
     {
       id: 1,
